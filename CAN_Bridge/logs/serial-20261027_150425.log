@@ -1,0 +1,91 @@
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[BRIDGE] LCD link DOWN
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[BRIDGE] LCD link UP
+[PROBE] sweep done. answering (cmd,src): NONE
+[BRIDGE] LCD link DOWN
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+[BRIDGE] LCD link UP
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+[BRIDGE] LCD link DOWN
+[BRIDGE] LCD link UP
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN std 0x200 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN std 0x200 [8]  TX-FAIL
+[BRIDGE] LCD link DOWN
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[BRIDGE] LCD link UP
+[PROBE] sweep done. answering (cmd,src): NONE
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[BRIDGE] LCD link DOWN
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+[BRIDGE] LCD link UP
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[BRIDGE] LCD link DOWN
+LCD->CAN std 0x200 [8]  TX-FAIL
+[BRIDGE] LCD link UP
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[BRIDGE] LCD link DOWN
+[PROBE] sweep done. answering (cmd,src): NONE
+[BRIDGE] LCD link UP
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN std 0x200 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[BRIDGE] LCD link DOWN
+[BRIDGE] LCD link UP
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+[BRIDGE] LCD link DOWN
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+[BRIDGE] LCD link UP
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[BRIDGE] LCD link DOWN
+[BRIDGE] LCD link UP
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[PROBE] sweep done. answering (cmd,src): NONE
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+[BRIDGE] LCD link DOWN
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL
+[BRIDGE] LCD link UP
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+[CAN] state=1 TEC=0 REC=0 tx_q=33 rx_q=0 tx_failed=0 bus_err=0 arb_lost=0
+LCD->CAN std 0x200 [8]  TX-FAIL
+LCD->CAN ext 0x2883FF0 [8]  TX-FAIL
+LCD->CAN std 0x200 [8]  TX-FAIL

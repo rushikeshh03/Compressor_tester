@@ -1,0 +1,557 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: FromBMS IoTDevice Charger ParallelBattery ToBMS
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ NewSignal_0005 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0004 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0003 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0002 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0001 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_UUID_Index : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_UUID_Char1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_UUID_Char2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_UUID_Char3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_UUID_Char4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_UUID_Char5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_UUID_Char6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_UUID_Char7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_NoOfCellAvailable : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_NoOfTempAvailable : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_NoOfExterTempAvailable : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Par_DisChargerCurrentAllow : 0|8@1+ (1,0) [0|255] "Amp" Vector__XXX
+ SG_ Par_RegenChargerCurrentAllow : 8|8@1+ (1,0) [0|255] "Amp" Vector__XXX
+ SG_ ParallolAvailableFlag : 16|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ RegenAllowFlag : 17|1@1+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ AverageSOC : 32|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ Hex_Data1_ : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data2_ : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data3_ : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data4_ : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data5_ : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data6_ : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data7_ : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data8_ : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESS_BatteryVoltage : 7|16@0+ (0.1,0) [0|6553.5] "Volt" Vector__XXX
+ SG_ ESS_BatteryCurrent : 23|16@0- (0.1,0) [-1000|1000] "Amp" Vector__XXX
+ SG_ ESS_AvrgCellVoltage : 39|8@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ ESS_AvrgCellTemp : 47|8@0- (1,0) [-200|200] "Degree C" Vector__XXX
+ SG_ ESS_SOC : 55|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ ESS_NegativeContacor : 56|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESS_PositiveContacor : 57|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESS_BattLow : 58|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESS_BattHigh : 59|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESS_CellHigh : 60|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESS_IGN_S : 61|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESS_CellLow : 62|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESS_FullCharge : 63|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ParallelMaxCellVoltage : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ParallelMaxCellVoltageNum : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ParallelMinCellVoltage : 47|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ParallelMinCellVoltageNum : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH3_BatteryPackNumber : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Packet_Index : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CellVoltage1PlusIndex : 8|13@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ CellVoltage2PlusIndex : 21|13@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ CellVoltage3PlusIndex : 34|13@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ CellVoltage4PlusIndex : 48|13@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ ExtrTempPacketIndex : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ExtrnTemp1PlusIndex : 23|16@0- (0.1,0) [-200|200] "  C" Vector__XXX
+ SG_ ExtrnTemp2PlusIndex : 39|16@0- (0.1,0) [-200|200] "  C" Vector__XXX
+ SG_ ExtrnTemp3PlusIndex : 55|16@0- (0.1,0) [-200|200] "  C" Vector__XXX
+ SG_ CellTempPacketIndex : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CellTemp1PlusIndex : 23|16@0- (0.1,0) [-200|200] "  C" Vector__XXX
+ SG_ CellTemp2PlusIndex : 39|16@0- (0.1,0) [-200|200] "  C" Vector__XXX
+ SG_ CellTemp3PlusIndex : 55|16@0- (0.1,0) [-200|200] "  C" Vector__XXX
+ SG_ PH1_BatteryVoltage : 7|16@0+ (0.01,0) [0|655.34] "Volt" Vector__XXX
+ SG_ PH1_BatteryPackNumber : 23|16@0+ (1,0) [0|0] "Number" Vector__XXX
+ SG_ PH1_SOC : 55|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ PH1_FullChargeBit : 56|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH1_PIN_IgnitionState : 57|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH1_LowCellBit : 58|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH1_HighCellBit : 59|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH1_HighPackBit : 60|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH1_CAN_INGITION : 61|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH1_PIN_CHG_EN : 62|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH1_PIN_DSG_EN : 63|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH1_MaxTemperature : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH1_MinTemperature : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH2_Current : 7|16@0+ (0.01,0) [0|0] "Amp" Vector__XXX
+ SG_ PH2_BatteryPackNumber : 23|16@0+ (1,0) [0|65535] "Number" Vector__XXX
+ SG_ PH2_BatteryPackState : 50|3@0+ (1,0) [0|5] "" Vector__XXX
+ SG_ PH2_CAN_ChargerDetection : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PH2_Fault : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH2_OverTemp_Warning : 52|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PH2_MaxTemperatureNum : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ PH2_MinTemperatureNum : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_CommandChar1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_CommandChar2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_CommandChar3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Command1 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Command2 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Command3 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Command4 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMS_Command5 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Hex_Data1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data3 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data4 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data5 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data6 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data7 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hex_Data8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Config_ID : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConfigData1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConfigData2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConfigData3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConfigData4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConfigData5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConfigData6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConfigData7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_OverPackVoltageFault : 0|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_UnderPackVoltageFault : 1|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_OverChargeCurrent : 2|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_OverDisChargeCurrent : 3|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_ShortCircuit : 4|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_VoltageReferenceFault : 5|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_VoltageRegulatorFault : 6|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_TemperatureMultiplexerError : 7|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_UnderTempFault : 8|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_LOAD_OverTemp : 9|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ ISL_OscillatorFault : 10|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ ISL_WatchdogTimeoutFault : 11|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_UnderCellVoltageFault : 12|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_OverCellVoltageFault : 13|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_OpenWireFault : 14|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_OverTempFault : 15|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_CellUnBalPro : 16|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_SPICommFault : 17|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_I2CCommFault : 18|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BMS_MCUResetFault : 19|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ ISL_DataCRCErrorFault : 20|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ ISL_DataReadyFault : 21|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ ChargerAuthenticationFailed : 22|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ ThermalRunawayDueToTemperature : 23|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ ThermalRunawayDueToVoltage : 24|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ MOSFET_DriveVoltageFault : 25|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ ReserveConditionReached : 26|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BatteryEmptyReached : 27|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ BatteryFullChargedReached : 28|1@1+ (1,0) [0|1] "True/False" Vector__XXX
+ SG_ Char1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Char2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Char3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Char4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Char5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Char6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Char7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Char8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DisChargeMOSFETRx : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ChargeMOSFETRx : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ IgnitionOverCANFlagrx : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSConfigVersion_CRC16bit : 7|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2559980119 HeartBeat: 8 FromBMS
+ SG_ BatteryVoltage : 7|16@0+ (0.01,0) [0|65530] "Volt" Vector__XXX
+ SG_ Current : 23|16@0- (0.01,0) [-32765|32765] "Amp" Vector__XXX
+ SG_ AvrgCellTemp : 39|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ AvrgCellVolt : 47|8@0- (0.1,0) [0|5000] "Volt" Vector__XXX
+ SG_ SOC : 55|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ DisFET : 63|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ ChgFET : 62|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ BattLow : 61|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ BattHigh : 60|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ CellHigh : 59|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ IGN_S : 57|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ CellLow : 58|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ FullChargeBit : 56|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+
+BO_ 2559980120 PackInfo: 8 FromBMS
+ SG_ AvailableCapacity : 7|16@0+ (0.01,0) [0|65530] "Ah" Vector__XXX
+ SG_ CyclesCount : 23|16@0+ (1,0) [0|65530] "Cycles" Vector__XXX
+ SG_ SOH : 39|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ SOP : 47|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BalancingStatus : 55|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ PDU_Temp : 63|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ IgnitionOverCANFlag : 54|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ CAN_LoginStatusFlag : 53|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ LowSOC_Indication : 52|1@0+ (1,0) [0|1] "T/F" Vector__XXX
+ SG_ CAN_ChargerDetectionFlag : 51|1@0+ (1,0) [0|1] "True/False" Vector__XXX
+
+BO_ 2559980121 CellTempInfo: 8 FromBMS
+ SG_ MaxCellVolt : 7|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ MinCellVolt : 23|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ MaxCellTemp : 39|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ MinCellTemp : 47|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ AverageCellVolt : 55|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+
+BO_ 2559980122 CellVoltages0: 8 FromBMS
+ SG_ NumberOfCell : 7|8@0+ (1,0) [0|200] "" Vector__XXX
+ SG_ Cell1 : 15|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ Cell2 : 31|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ Cell3 : 47|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+
+BO_ 2559980123 CellVoltages1: 8 FromBMS
+ SG_ Cell4 : 7|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ Cell5 : 23|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ Cell6 : 39|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ Cell7 : 55|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+
+BO_ 2559980124 CellVoltages2: 8 FromBMS
+ SG_ Cell8 : 7|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell9 : 23|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell10 : 39|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell11 : 55|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+
+BO_ 2559980125 CellVoltages3: 8 FromBMS
+ SG_ Cell12 : 7|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell13 : 23|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell14 : 39|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell15 : 55|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+
+BO_ 2559980126 CellVoltages4: 8 FromBMS
+ SG_ Cell16 : 7|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell17 : 23|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell18 : 39|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell19 : 55|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+
+BO_ 2559980127 CellVoltages5: 8 FromBMS
+ SG_ Cell20 : 7|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell21 : 23|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell22 : 39|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+ SG_ Cell23 : 55|16@0+ (1,0) [0|5000] "mv" Vector__XXX
+
+BO_ 2559980128 CellVoltages6nStatus: 8 FromBMS
+ SG_ Cell24 : 7|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ CellMaxMinDiff : 23|16@0+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ MaxCell_ID : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ MinCell_ID : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ MaxCellTemp_ID : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ MinCellTemp_ID : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2559980129 TempValues0: 8 FromBMS
+ SG_ NumOfTemp : 7|8@0+ (1,0) [0|200] "" Vector__XXX
+ SG_ Temp1 : 15|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ Temp2 : 23|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ Temp3 : 31|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ Temp4 : 39|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ Temp5 : 47|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ Temp6 : 55|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ Temp7 : 63|8@0- (1,0) [-40|120] " C" Vector__XXX
+
+BO_ 2559980130 TempValues1: 8 FromBMS
+ SG_ Temp8 : 7|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ IC1Temp : 15|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ IC2Temp : 23|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ PDUTemp : 31|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ PCBTemp2 : 47|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ HeatSink1Temp : 55|8@0- (1,0) [-40|120] " C" Vector__XXX
+ SG_ HeatSink2Temp : 63|8@0- (1,0) [-40|120] " C" Vector__XXX
+
+BO_ 2559980131 BMSStates: 8 FromBMS
+ SG_ bmsPowerMode : 7|8@0+ (1,0) [0|200] "" Vector__XXX
+ SG_ packCurrentState : 15|8@0+ (1,0) [0|200] "" Vector__XXX
+ SG_ Alarm : 23|8@0+ (1,0) [0|200] "" Vector__XXX
+ SG_ Fault : 31|8@0+ (1,0) [0|200] "" Vector__XXX
+ SG_ CellBasedFullCapSOHValue : 39|16@0+ (0.01,0) [0|200] "%" Vector__XXX
+ SG_ averageTimeToFull : 55|16@0+ (1,0) [0|65530] "Minute" Vector__XXX
+
+BO_ 2559980118 BatteryPackSerialNo: 8 FromBMS
+ SG_ BatChar_1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BatChar_2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BatChar_3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BatChar_4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BatterySerialInt : 39|32@0+ (1,0) [0|2147483647] "" Vector__XXX
+
+BO_ 2559980132 BMS_FaultWarningFlags: 8 FromBMS
+ SG_ WarningFlags_Index : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CellOverVoltageWF_0 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CellUnderVoltageWF_0 : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CellChargingOverTempWF_0 : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CellChargingUnderTempWF_0 : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CellDischargingOverTempWF_0 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CellDischargingUnderTempWF_0 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CellUnBalanceWF_0 : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PackOverVoltageWF_0 : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PackUnderVoltageWF_0 : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ChargingOverCurrentWF_0 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DischargingOverCurrentWF_0 : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SOCWF_0 : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SOHWF_0 : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PDU_OverTempWF_0 : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ShortCircuitWF_0 : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ OpneWireWF_0 : 32|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0007 : 34|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2559980133 EnergyDetails: 8 FromBMS
+ SG_ EnergyOut : 7|32@0+ (1,0) [0|2147483647] "W" Vector__XXX
+ SG_ EnergyIn : 39|32@0+ (1,0) [0|2147483647] "W" Vector__XXX
+
+BO_ 2566841856 CAN_TimeStamp: 8 FromBMS
+ SG_ Year : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ month : 8|8@1+ (1,0) [0|12] "" Vector__XXX
+ SG_ day : 16|8@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ hour : 24|8@1+ (1,0) [0|24] "" Vector__XXX
+ SG_ minutes : 32|8@1+ (1,0) [0|60] "" Vector__XXX
+ SG_ seconds : 40|8@1+ (1,0) [0|60] "" Vector__XXX
+
+BO_ 2559980139 CAN_BMSModelID: 8 FromBMS
+ SG_ BMSModelID_Char1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSModelID_Char2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSModelID_Char3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSModelID_Char4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSModelID_Char5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSModelID_Char6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSModelID_Char7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2559980137 CAN_PDUHardwareVersion: 8 FromBMS
+ SG_ PDUHardwareVersion_Char1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDUHardwareVersion_Char2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDUHardwareVersion_Char3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDUHardwareVersion_Char4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDUHardwareVersion_Char5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDUHardwareVersion_Char6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDUHardwareVersion_Char7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PDUHardwareVersion_Char8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2559980136 CAN_BMSHardwareVersion: 8 FromBMS
+ SG_ BMSHardwareVersion_Char1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSHardwareVersion_Char2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSHardwareVersion_Char3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSHardwareVersion_Char4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSHardwareVersion_Char5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSHardwareVersion_Char6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSHardwareVersion_Char7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSHardwareVersion_Char8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2559980135 CAN_BMSFirmwareVersion: 8 FromBMS
+ SG_ BMSFirmwareVersion_Char1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSFirmwareVersion_Char2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSFirmwareVersion_Char3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSFirmwareVersion_Char4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSFirmwareVersion_Char5 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSFirmwareVersion_Char6 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSFirmwareVersion_Char7 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSFirmwareVersion_Char8 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2559980140 CAN_Flags_PinStates: 8 FromBMS
+ SG_ DEV_ON_OFF : 0|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+ SG_ ISL_GLOBAL_FAULT : 1|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+ SG_ ISL_GLOBAL_EN : 2|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+ SG_ BMS_INGITION : 3|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+ SG_ D_MOSFETs : 4|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+ SG_ C_MOSFETs : 5|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+ SG_ P_MOSFETs : 6|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+ SG_ SCD_ALERT : 7|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+ SG_ V5_ON_OFF : 8|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+ SG_ STATUS_PIN : 9|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+ SG_ POWER_GOOD_PIN : 10|1@0+ (1,0) [0|0] "T/F" Vector__XXX
+
+BO_ 2432505114 ChargerToBMS: 8 Charger
+ SG_ ChargerState : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargerVoltage : 8|16@1+ (0.01,0) [0|655.35] "Volt" Vector__XXX
+ SG_ ChargingCurrent : 24|16@1+ (0.01,0) [0|655.35] "Amp" Vector__XXX
+ SG_ Reserved_2bit : 5|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ CC_CV_StateOfCharger : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566848603 BMSToCharger: 8 FromBMS
+ SG_ ChargerStateSet : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ChargingVoltRequired : 8|16@1+ (0.01,0) [0|655.35] "volt" Vector__XXX
+ SG_ ChargingCurrentRequired : 24|16@1+ (0.01,0) [0|655.35] "amp" Vector__XXX
+
+BO_ 2559980143 BatteryTimeParameters: 8 FromBMS
+ SG_ TimeToCharge : 7|16@0+ (1,0) [0|65535] "Minutes" Vector__XXX
+
+BO_ 2559980144 Cell_Balancing_Status_1: 8 FromBMS
+ SG_ Reserv_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Cell_Balancing_Index : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell1 : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell2 : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell3 : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell4 : 19|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell5 : 20|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell6 : 21|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell7 : 22|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell8 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell9 : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell10 : 25|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell11 : 26|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell12 : 27|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell13 : 28|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell14 : 29|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell15 : 30|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell16 : 31|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell17 : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell18 : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell19 : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell20 : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell21 : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell22 : 37|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell23 : 38|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell24 : 39|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell25 : 40|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell26 : 41|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell27 : 42|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell28 : 43|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell29 : 44|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell30 : 45|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell31 : 46|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell32 : 47|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell33 : 48|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell34 : 49|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell35 : 50|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell36 : 51|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell37 : 52|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell38 : 53|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell39 : 54|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell40 : 55|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell41 : 56|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell42 : 57|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell43 : 58|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell44 : 59|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell45 : 60|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell46 : 61|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell47 : 62|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BalStatus_Cell48 : 63|1@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ SG_ 3221225472 PH2_BatteryPackNumber "Number value after prefix, Like ADIT2001 = 2001 is the battery pack number, complete this packet data is related to ADIT2001 parallel pack only";
+CM_ SG_ 3221225472 PH2_BatteryPackState "Charging\t-\t1
+Discharging\t-\t2
+Normal\t-\t3
+Ideal\t-\t4
+CurrentSleep\t-\t5";
+CM_ SG_ 3221225472 PH2_CAN_ChargerDetection "Not_Detected\t-\t0
+Detected\t-\t1
+";
+CM_ SG_ 3221225472 PH2_Fault "
+NoneFault-0
+0
+OverPackVoltageFault-1
+1
+OverPackVoltage-2
+2
+UnderPackVoltageFault,
+3
+OverOCD1Current,
+4
+OverOCD2Current,
+5
+OverChargeCurrent,
+6
+OverDisChargeCurrent,
+7
+ShortCircuit,
+8
+CellOpenWireFault,
+9
+VoltageReferenceFault,
+10
+VoltageRegulatorFault,
+11
+TemperatureMultiplexerError,
+12
+UnderTempFault,
+13
+PDUOverTempFault,
+14
+OscillatorFault,
+15
+WatchdogTimeoutFault,
+16
+UnderCellVoltageFault,
+17
+OverCellVoltageFault,
+18
+OpenWireFault,
+19
+OverTempFault,
+20
+CellUnBalPro,
+21
+SCDLatchHigh,
+22
+SPI Communication Fault
+23
+I2C Communication Fault
+24
+MCU Reset Fault
+25
+Data CRC Error Fault
+26
+Data Ready Fault
+27
+ChargerAuthenticationFailed,
+28
+ThermalRunawayDueToTemperature,
+29
+ThermalRunawayDueToVoltage,  
+30
+MOSFET_DriveVoltageFault
+31";
+CM_ SG_ 3221225472 PH2_OverTemp_Warning "In Warning\t-\t1
+No Warning\t-\t0";
+CM_ SG_ 3221225472 Config_ID "ID 1 - Time configuration
+";
+CM_ SG_ 3221225472 ConfigData1 "In case of time configuration - hour";
+CM_ SG_ 3221225472 ConfigData2 "In case of time configuration - Minute
+";
+CM_ SG_ 3221225472 ConfigData3 "In case of time configuration - Second";
+CM_ SG_ 3221225472 ConfigData4 "In case of time configuration - Day
+";
+CM_ SG_ 3221225472 ConfigData5 "In case of time configuration - Month";
+CM_ SG_ 3221225472 ConfigData6 "In case of time configuration - Year
+";
+CM_ BO_ 2559980119 "";
+CM_ SG_ 2559980131 bmsPowerMode "";
+CM_ SG_ 2559980131 packCurrentState "";
+CM_ SG_ 2559980131 Fault "";
+CM_ SG_ 2559980133 EnergyOut "Energy Consumed at the time of discharging
+";
+CM_ SG_ 2559980133 EnergyIn "Energy Consumed at the time of charging
+";
+CM_ SG_ 2566848603 ChargerStateSet "0 = Turn OFF Charger at any fault 
+1 = Turn ON Charger in normal condition
+2 = Full Charge
+";
+CM_ BO_ 2559980143 "";
+VAL_ 2559980131 bmsPowerMode 0 "Active Mode" 1 "Sleep Mode" 2 "DeepSleep Mode" 3 "Sleep Time WakeUp mode" ;
+VAL_ 2559980131 packCurrentState 1 "Charging" 2 "Discharing" 3 "Normal" 4 "Ideal " 5 "Current Sleep" 6 "Regen" ;
+VAL_ 2559980131 Fault 0 "No fault" 1 "OverPackVoltageFault" 2 "OverPackVoltage" 3 "UnderPackVoltageFault" 4 "OverOCD1Current" 5 "OverOCD2Current" 6 "OverChargeCurrent" 7 "OverDisChargeCurrent" 8 "ShortCircuit" 9 "CellOpenWireFault" 10 "VoltageReferenceFault" 11 "VoltageRegulatorFault" 13 "UnderTempFault" 14 "PDUOverTempFault" 15 "OscillatorFault" 16 "WatchdogTimeoutFault" 17 "UnderCellVoltageFault" 18 "OverCellVoltageFault" 19 "OpenWireFault" 20 "OverTempFault" 21 "CellUnBalPro" 22 "SCDLatchHigh" 23 "SPI Communication Fault" 24 "I2C Communication Fault" 25 "MCU Reset Fault" 26 "Data CRC Error Fault" 27 "Data Ready Fault" 28 "ChargerAuthenticationFailed" 29 "ThermalRunawayDueToTemperature" 30 "ThermalRunawayDueToVoltage" 31 "MOSFET_DriveVoltageFault" 32 "ReserveConditionReached" 33 "BatteryEmptyReached" 34 "BatteryFullChargedReached" 35 "WeldCheckFault" 36 "FuseBurnFault" 12 "TemperatureMultiplexerError" 37 "PCU_OverTempFault" ;
+VAL_ 2432505114 ChargerState 0 "Ideal" 1 "Charging Battery" 2 "Stand-by" 3 "Battery Failure" 4 "Charger Failure" ;
+VAL_ 2432505114 CC_CV_StateOfCharger 0 "CC_State" 1 "CV_State" ;
+

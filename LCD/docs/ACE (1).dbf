@@ -1,0 +1,307 @@
+//******************************BUSMASTER Messages and signals Database ******************************//
+
+[DATABASE_VERSION] 1.3
+
+[PROTOCOL] CAN
+
+[BUSMASTER_VERSION] [3.2.2]
+[NUMBER_OF_MESSAGES] 4
+
+[START_MSG] ZIVAN_J1939_CHARGER_SETPOINT,419364955,8,5,1,X,
+[START_SIGNALS] Reserved_24bit,24,6,0,U,16777215,0,1,0,1,,,
+[START_SIGNALS] Charger_1_Output_Current_SetPt,16,4,0,U,65500,0,1,0,0.01,A,,
+[START_SIGNALS] Charger_1_Output_Voltage_SetPt,16,2,0,U,64255,0,1,0,0.05,V,,
+[START_SIGNALS] Reserved_6bit,6,1,2,U,63,0,1,0,1,,,
+[START_SIGNALS] Charger_1_Chargr_Status_from_BMS,2,1,0,U,1,0,1,0,1,,,
+[VALUE_DESCRIPTION] "Enabled (charger active)",1
+[VALUE_DESCRIPTION] "Disable (charger inactive)",0
+[END_MSG]
+
+[START_MSG] ZIVAN_J1939_CHARGER_TO_BMS,285021466,8,6,1,X,
+[START_SIGNALS] Reserved_24bit,24,6,0,U,16777215,0,1,0,1,,,
+[START_SIGNALS] Bat_Chgr_1_Output_Current,16,4,0,U,64255,0,1,-1600,0.05,A,,
+[START_SIGNALS] Bat_Chgr_1_Output_Voltage,16,2,0,U,64255,0,1,0,0.05,V,,
+[START_SIGNALS] Reserved_2bit,2,1,6,U,3,0,1,0,1,,,
+[START_SIGNALS] Bat_Chgr_1_Pwrline_State,2,1,4,U,2,0,1,0,1,,,
+[VALUE_DESCRIPTION] "Error ",2
+[VALUE_DESCRIPTION] "Connected.",1
+[VALUE_DESCRIPTION] "Disconnected.",0
+[START_SIGNALS] Bat_Chgr_1_State,4,1,0,U,14,0,1,0,1,,,
+[VALUE_DESCRIPTION] "Charger failure.",14
+[VALUE_DESCRIPTION] "Battery failure.",13
+[VALUE_DESCRIPTION] "Reserved",12
+[VALUE_DESCRIPTION] "Reserved",11
+[VALUE_DESCRIPTION] "Reserved",10
+[VALUE_DESCRIPTION] "Reserved",9
+[VALUE_DESCRIPTION] "Reserved",8
+[VALUE_DESCRIPTION] "Reserved",7
+[VALUE_DESCRIPTION] "Reserved",6
+[VALUE_DESCRIPTION] "Reserved",5
+[VALUE_DESCRIPTION] "Reserved",4
+[VALUE_DESCRIPTION] "Reserved",3
+[VALUE_DESCRIPTION] "Stand-by or maintaining charge.",2
+[VALUE_DESCRIPTION] "Charging the battery.",1
+[VALUE_DESCRIPTION] "Idling state",0
+[END_MSG]
+
+[START_MSG] VOLTAGE_INFO,419365328,8,3,0,X,
+[START_SIGNALS] Battery_Voltage,32,4,0,I,2147483545,0,0,0,0.001,V,,
+[START_SIGNALS] Min_Voltage,16,6,0,I,32767,0,0,0,0.001,V,,
+[START_SIGNALS] Max_Voltage,16,8,0,I,32767,0,0,0,0.001,V,,
+[END_MSG]
+
+[START_MSG] BATTERY_STATE,419366352,8,3,0,X,
+[START_SIGNALS] Equivalent_Cycle,32,8,0,F,3.4e+038,0,0,0,1,,,
+[START_SIGNALS] State_of_Health,16,4,0,I,10000,0,0,0,0.01,%,,
+[START_SIGNALS] State_of_Charge,16,2,0,I,10000,0,0,0,0.01,%,,
+[END_MSG]
+
+[START_SIG_LIST]
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Dilong_Tc_Charger_Status,8,1,0,U,255,0,0,0,1,,,
+[START_SIGNALS] Dilong_Tc_Charger_Reading_Curr,16,1,0,U,65535,0,0,0,0.1,A,,
+[START_SIGNALS] Dilong_Tc_Charger_Reading_Volt,16,1,0,U,65535,0,0,0,0.1,V,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Dilong_Charger_BMS_Mode,8,1,0,U,1,0,0,0,1,,,
+[START_SIGNALS] Charger_Control,8,1,0,U,255,0,0,0,1,,,
+[VALUE_DESCRIPTION] "Battery Protection",1
+[VALUE_DESCRIPTION] "Charger is Charging",0
+[START_SIGNALS] Charger_Voltage_Setpoint,16,1,0,U,65535,0,0,0,0.1,V,,
+[START_SIGNALS] Charger_Current_Setpoint,16,1,0,U,65535,0,0,0,0.1,A,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Dilong_Charger_BMS_Mode,8,1,0,U,1,0,0,0,1,,,
+[START_SIGNALS] Charger_Control,8,1,0,U,255,0,0,0,1,,,
+[START_SIGNALS] Charger_Voltage_Setpoint,16,1,0,U,65535,0,0,0,0.1,V,,
+[START_SIGNALS] Charger_Current_Setpoint,16,1,0,U,65535,0,0,0,0.1,A,,
+[START_SIGNALS] Unused_8bit,8,1,0,U,255,0,0,0,1,,,
+[START_SIGNALS] Tork_Motor_Charger_State,8,1,0,U,255,0,0,0,1,,,
+[START_SIGNALS] Tork_Motor_Fault_Byte1,8,1,0,U,255,0,0,0,1,,,
+[START_SIGNALS] Tork_Motor_Fault_Byte0,8,1,0,U,255,0,0,0,1,,,
+[START_SIGNALS] Unused,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Dilong_Charger_BMS_Mode,8,1,0,U,1,0,0,0,1,,,
+[START_SIGNALS] Dilong_Tc_Charger_Status,8,1,0,U,255,0,0,0,1,,,
+[START_SIGNALS] Reserved_3_bit,3,1,0,U,7,0,1,0,1,,,
+[START_SIGNALS] TC_Communication,1,1,0,B,1,0,1,0,1,,,
+[START_SIGNALS] TC_Starting_State,1,1,0,B,1,0,1,0,1,,,
+[START_SIGNALS] TC_Input_Voltage_Range,1,1,0,B,1,0,1,0,1,,,
+[START_SIGNALS] TC_Charger_Temp_Protection,1,1,0,B,1,0,1,0,1,,,
+[START_SIGNALS] TC_Hardware_failure,1,1,0,B,1,0,1,0,1,,,
+[START_SIGNALS] Reserved_24bit,24,1,0,U,16777215,0,1,0,1,,,
+[START_SIGNALS] TC_Charger_Outpur_Curr,16,1,0,U,65535,0,0,0,0.1,A,,
+[START_SIGNALS] TC_Charger_Output_Voltage,16,1,0,U,65535,0,0,0,0.1,V,,
+[START_SIGNALS] Reserved_24bit,24,1,0,U,16777215,0,1,0,1,,,
+[START_SIGNALS] Charger_Control,8,1,0,U,255,0,0,0,1,,,
+[START_SIGNALS] Charger_Current_Setpoint,16,1,0,U,65535,0,0,0,0.1,A,,
+[START_SIGNALS] Charger_Voltage_Setpoint,16,1,0,U,65535,0,0,0,0.1,V,,
+[START_SIGNALS] Reserved_3_bit,3,1,0,U,7,0,0,0,1,,,
+[START_SIGNALS] TC_Communication,1,1,0,B,1,0,0,0,1,,,
+[START_SIGNALS] TC_Starting_State,1,1,0,B,1,0,0,0,1,,,
+[START_SIGNALS] TC_Input_Voltage_Range,1,1,0,B,1,0,0,0,1,,,
+[START_SIGNALS] TC_Charger_Temp_Protection,1,1,0,B,1,0,0,0,1,,,
+[START_SIGNALS] TC_Hardware_failure,1,1,0,B,1,0,0,0,1,,,
+[START_SIGNALS] Reserved_24bit,24,1,0,U,16777215,0,0,0,1,,,
+[START_SIGNALS] TC_Charger_Outpur_Curr,16,1,0,U,65535,0,0,0,0.1,A,,
+[START_SIGNALS] TC_Charger_Output_Voltage,16,1,0,U,65535,0,0,0,0.1,V,,
+[START_SIGNALS] Reserved_24bit,24,1,0,U,16777215,0,1,0,1,,,
+[START_SIGNALS] POwerModuleOutputCurrent,16,1,0,U,65535,0,0,0,0.01,A,,
+[START_SIGNALS] PowerModuleOutputVoltage,16,1,0,U,65535,0,0,0,0.01,V,,
+[START_SIGNALS] Reserved_2bit,2,1,0,U,3,0,1,0,1,,,
+[START_SIGNALS] Bat_Chgr_1_Pwrline_State,2,1,0,U,2,0,1,0,1,,,
+[VALUE_DESCRIPTION] "Error ",2
+[VALUE_DESCRIPTION] "Connected.",1
+[VALUE_DESCRIPTION] "Disconnected.",0
+[START_SIGNALS] Bat_Chgr_1_State,4,1,0,U,14,0,1,0,1,,,
+[VALUE_DESCRIPTION] "Charger failure.",14
+[VALUE_DESCRIPTION] "Battery failure.",13
+[VALUE_DESCRIPTION] "Reserved",12
+[VALUE_DESCRIPTION] "Reserved",11
+[VALUE_DESCRIPTION] "Reserved",10
+[VALUE_DESCRIPTION] "Reserved",9
+[VALUE_DESCRIPTION] "Reserved",8
+[VALUE_DESCRIPTION] "Reserved",7
+[VALUE_DESCRIPTION] "Reserved",6
+[VALUE_DESCRIPTION] "Reserved",5
+[VALUE_DESCRIPTION] "Reserved",4
+[VALUE_DESCRIPTION] "Reserved",3
+[VALUE_DESCRIPTION] "Stand-by or maintaining charge.",2
+[VALUE_DESCRIPTION] "Charging the battery.",1
+[VALUE_DESCRIPTION] "Idling state",0
+[START_SIGNALS] Date,8,1,0,U,31,1,1,0,1,,,
+[START_SIGNALS] Month,8,1,0,U,12,1,1,0,1,,,
+[START_SIGNALS] Year,16,1,0,U,65535,0,0,0,1,,,
+[START_SIGNALS] Message_Type,8,1,0,U,255,0,1,0,1,,,
+[START_SIGNALS] Unused_16bit,16,1,0,I,32767,-32768,0,0,1,#,,
+[START_SIGNALS] Zivan_RE_Max_Chg_Voltage,16,1,0,U,65535,0,0,0,0.1,V,,
+[START_SIGNALS] Zivan_RE_Max_Chg_Current,16,1,0,U,65535,0,0,0,0.1,A,,
+[START_SIGNALS] No_data,8,1,0,U,255,0,0,0,1,,,
+[END_SIG_LIST]
+
+[START_VALUE_TABLE]
+[START_TABLE] Critical_Errors
+[VALUE_DESCRIPTION] "Deep_Dishcharge_Error",48
+[END_TABLE]
+[START_TABLE] ERROR_NAME
+[VALUE_DESCRIPTION] "Under Voltage",1
+[VALUE_DESCRIPTION] "Over Voltage",0
+[END_TABLE]
+[START_TABLE] Thermal_ctrl
+[VALUE_DESCRIPTION] "ON",1
+[VALUE_DESCRIPTION] "OFF",0
+[END_TABLE]
+[START_TABLE] sleep_type
+[VALUE_DESCRIPTION] "Deep sleep (BMS in sleep, BLE not discoverable)",1
+[VALUE_DESCRIPTION] "Sleep (BMS in sleep, BLE discoverable)",0
+[END_TABLE]
+[START_TABLE] bool_state
+[VALUE_DESCRIPTION] "ON",1
+[VALUE_DESCRIPTION] "OFF",0
+[END_TABLE]
+[START_TABLE] bms_config_variable_type
+[VALUE_DESCRIPTION] "NO_TYPE",5
+[VALUE_DESCRIPTION] "FLOAT",4
+[VALUE_DESCRIPTION] "UINT32/INT32",3
+[VALUE_DESCRIPTION] "UINT16/INT16",2
+[VALUE_DESCRIPTION] "STRING",1
+[VALUE_DESCRIPTION] "BOOL",0
+[END_TABLE]
+[START_TABLE] warning_error_state_table
+[VALUE_DESCRIPTION] "WAR_ERR_LEAVING_WARNING",6
+[VALUE_DESCRIPTION] "WAR_ERR_IN_WARNING",5
+[VALUE_DESCRIPTION] "WAR_ERR_ENTERING_WARNING",4
+[VALUE_DESCRIPTION] "WAR_ERR_LEAVING_ERROR",3
+[VALUE_DESCRIPTION] "WAR_ERR_IN_ERROR",2
+[VALUE_DESCRIPTION] "WAR_ERR_ENTERING_ERROR",1
+[VALUE_DESCRIPTION] "WAR_ERR_NONE",0
+[END_TABLE]
+[END_VALUE_TABLE]
+
+[NODE] 
+
+[START_DESC]
+[START_DESC_NET]
+[END_DESC_NET]
+
+[START_DESC_NODE]
+[END_DESC_NODE]
+
+[START_DESC_MSG]
+1073741824 X "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+[END_DESC_MSG]
+
+[START_DESC_SIG]
+1073741824 X Reserved_24bit "02-01-2021 : Reviewed : Aman02-01-2021 : Reviewed : Aman02-01-2021 : Reviewed : Aman";
+1073741824 X Reserved_24bit "02-01-2021 : Reviewed : Aman";
+1073741824 X Reserved_2bit "02-01-2021 : Reviewed : Aman";
+1073741824 X Bat_Chgr_1_Pwrline_State "02-01-2021 : Reviewed : Aman";
+1073741824 X Bat_Chgr_1_State "02-01-2021 : Reviewed : Aman";
+1073741824 X Unused_16bit "29-12-2020 : Reviewed : Datta";
+419364955 X Reserved_24bit "02-01-2021 : Reviewed : Aman";
+419364955 X Charger_1_Output_Current_SetPt "02-01-2021 : Reviewed : Aman";
+419364955 X Charger_1_Output_Voltage_SetPt "02-01-2021 : Reviewed : Aman";
+419364955 X Reserved_6bit "02-01-2021 : Reviewed : Aman";
+419364955 X Charger_1_Chargr_Status_from_BMS "02-01-2021 : Reviewed : Aman";
+285021466 X Reserved_24bit "02-01-2021 : Reviewed : Aman";
+285021466 X Bat_Chgr_1_Output_Current "02-01-2021 : Reviewed : Aman";
+285021466 X Bat_Chgr_1_Output_Voltage "02-01-2021 : Reviewed : Aman";
+285021466 X Reserved_2bit "02-01-2021 : Reviewed : Aman";
+285021466 X Bat_Chgr_1_Pwrline_State "02-01-2021 : Reviewed : Aman";
+285021466 X Bat_Chgr_1_State "02-01-2021 : Reviewed : Aman";
+419365328 X Battery_Voltage "29-12-2020 : Reviewed : Datta";
+419365328 X Min_Voltage "29-12-2020 : Reviewed : Datta";
+419365328 X Max_Voltage "29-12-2020 : Reviewed : Datta";
+419366352 X Equivalent_Cycle "29-12-2020 : Reviewed : Datta";
+419366352 X State_of_Health "29-12-2020 : Reviewed : Datta";
+419366352 X State_of_Charge "29-12-2020 : Reviewed : Datta";
+[END_DESC_SIG]
+[END_DESC]
+
+[START_PARAM]
+[START_PARAM_NET]
+[END_PARAM_NET]
+
+[START_PARAM_NODE]
+[END_PARAM_NODE]
+
+[START_PARAM_MSG]
+[END_PARAM_MSG]
+
+[START_PARAM_SIG]
+[END_PARAM_SIG]
+
+[START_PARAM_NODE_RX_SIG]
+[END_PARAM_NODE_RX_SIG]
+
+[START_PARAM_NODE_TX_MSG]
+[END_PARAM_NODE_TX_MSG]
+[END_PARAM]
+
+[START_PARAM_VAL]
+[START_PARAM_NET_VAL]
+[END_PARAM_NET_VAL]
+
+[START_PARAM_NODE_VAL]
+[END_PARAM_NODE_VAL]
+
+[START_PARAM_MSG_VAL]
+[END_PARAM_MSG_VAL]
+
+[START_PARAM_SIG_VAL]
+[END_PARAM_SIG_VAL]
+
+[END_PARAM_VAL]
+
+
+[START_NOT_SUPPORTED]
+[END_NOT_SUPPORTED]
+
+[START_NOT_PROCESSED]
+	PZ_
+	ON_QRS_
+	ON_
+	INY_
+	PNG_QRS_
+	PNG_
+	SVYGRE
+	ON_QRS_QRS_
+	RI_QNGN_
+	RAIINE_QNGN_
+	FTGLCR_
+	FTGLCR_INY_
+	ON_QRS_FTGLCR_
+	ON_FTGLCR_
+	FVT_GLCR_ERS_
+	INY_GNOYR_
+	FVT_TEBHC_
+	FVT_INYGLCR_
+	FVTGLCR_INYGLCR_
+	OB_GK_OH_
+	ON_QRS_ERY_
+	ON_ERY_
+	ON_QRS_QRS_ERY_
+	OH_FT_ERY_
+	OH_RI_ERY_
+	OH_OB_ERY_
+	FT_ZHY_INY_
+OF_:
+
+[END_NOT_PROCESSED]

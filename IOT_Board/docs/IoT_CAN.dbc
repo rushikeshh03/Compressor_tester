@@ -1,0 +1,149 @@
+VERSION "ESP32_S3_test10 (IoT battery-testing gateway) — CAN interface"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: IOT BMS HOST
+
+
+BO_ 11 BL_Command: 8 HOST
+ SG_ Byte0 : 0|8@1+ (1,0) [0|255] "" IOT
+ SG_ Seq : 8|8@1+ (1,0) [0|255] "" IOT
+ SG_ Magic : 16|8@1+ (1,0) [0|255] "" IOT
+ SG_ Len : 24|8@1+ (1,0) [0|4] "" IOT
+ SG_ Data0 : 32|8@1+ (1,0) [0|255] "" IOT
+ SG_ Data1 : 40|8@1+ (1,0) [0|255] "" IOT
+ SG_ Data2 : 48|8@1+ (1,0) [0|255] "" IOT
+ SG_ Data3 : 56|8@1+ (1,0) [0|255] "" IOT
+
+BO_ 12 BL_Enter_IoT: 8 HOST
+ SG_ B0 : 0|8@1+ (1,0) [0|255] "" IOT
+ SG_ B1 : 8|8@1+ (1,0) [0|255] "" IOT
+ SG_ B2 : 16|8@1+ (1,0) [0|255] "" IOT
+ SG_ B3 : 24|8@1+ (1,0) [0|255] "" IOT
+ SG_ B4 : 32|8@1+ (1,0) [0|255] "" IOT
+ SG_ B5 : 40|8@1+ (1,0) [0|255] "" IOT
+ SG_ B6 : 48|8@1+ (1,0) [0|255] "" IOT
+ SG_ B7 : 56|8@1+ (1,0) [0|255] "" IOT
+
+BO_ 736 IoT_Baud_Cmd: 2 HOST
+ SG_ BaudMagic : 0|8@1+ (1,0) [0|255] "" IOT
+ SG_ BaudSelector : 8|8@1+ (1,0) [0|255] "" IOT
+
+BO_ 737 IoT_Baud_Ack: 3 IOT
+ SG_ BaudMagic : 0|8@1+ (1,0) [0|255] "" HOST
+ SG_ BaudSelector : 8|8@1+ (1,0) [0|255] "" HOST
+ SG_ Effect : 16|8@1+ (1,0) [0|1] "" HOST
+
+BO_ 1110 BL_Heartbeat: 8 IOT
+ SG_ B0 : 0|8@1+ (1,0) [0|255] "" HOST
+ SG_ B1 : 8|8@1+ (1,0) [0|255] "" HOST
+ SG_ B2 : 16|8@1+ (1,0) [0|255] "" HOST
+ SG_ B3 : 24|8@1+ (1,0) [0|255] "" HOST
+ SG_ B4 : 32|8@1+ (1,0) [0|255] "" HOST
+ SG_ B5 : 40|8@1+ (1,0) [0|255] "" HOST
+ SG_ B6 : 48|8@1+ (1,0) [0|255] "" HOST
+ SG_ B7 : 56|8@1+ (1,0) [0|255] "" HOST
+
+BO_ 1794 BL_ReadyBeacon: 8 IOT
+ SG_ B0 : 0|8@1+ (1,0) [0|255] "" HOST
+ SG_ B1 : 8|8@1+ (1,0) [0|255] "" HOST
+ SG_ B2 : 16|8@1+ (1,0) [0|255] "" HOST
+ SG_ B3 : 24|8@1+ (1,0) [0|255] "" HOST
+ SG_ B4 : 32|8@1+ (1,0) [0|255] "" HOST
+ SG_ B5 : 40|8@1+ (1,0) [0|255] "" HOST
+ SG_ B6 : 48|8@1+ (1,0) [0|255] "" HOST
+ SG_ B7 : 56|8@1+ (1,0) [0|255] "" HOST
+
+BO_ 2560688129 IoT_To_BMS_Config: 8 IOT
+ SG_ Cmd : 0|8@1+ (1,0) [0|255] "" BMS
+ SG_ Second : 8|8@1+ (1,0) [0|59] "s" BMS
+ SG_ Minute : 16|8@1+ (1,0) [0|59] "min" BMS
+ SG_ Hour : 24|8@1+ (1,0) [0|23] "h" BMS
+ SG_ Reserved : 32|8@1+ (1,0) [0|255] "" BMS
+ SG_ Day : 40|8@1+ (1,0) [1|31] "" BMS
+ SG_ Month : 48|8@1+ (1,0) [1|12] "" BMS
+ SG_ Year : 56|8@1+ (1,0) [0|255] "" BMS
+
+BO_ 2560753154 IoT_Diag_Versions: 8 IOT
+ SG_ BMS_Version : 0|16@1+ (1,0) [0|65535] "" HOST
+ SG_ IoT_Version : 16|16@1+ (1,0) [0|65535] "" HOST
+ SG_ MQTT_Connected : 32|8@1+ (1,0) [0|1] "" HOST
+ SG_ Partition_ID : 40|8@1+ (1,0) [0|2] "" HOST
+
+BO_ 2560753155 IoT_Diag_DeviceID: 8 IOT
+ SG_ Char0 : 0|8@1+ (1,0) [0|255] "" HOST
+ SG_ Char1 : 8|8@1+ (1,0) [0|255] "" HOST
+ SG_ Char2 : 16|8@1+ (1,0) [0|255] "" HOST
+ SG_ Char3 : 24|8@1+ (1,0) [0|255] "" HOST
+ SG_ Char4 : 32|8@1+ (1,0) [0|255] "" HOST
+ SG_ Char5 : 40|8@1+ (1,0) [0|255] "" HOST
+ SG_ Char6 : 48|8@1+ (1,0) [0|255] "" HOST
+ SG_ Char7 : 56|8@1+ (1,0) [0|255] "" HOST
+
+BO_ 2560695042 BMS_Voltage: 8 BMS
+ SG_ Voltage_raw : 7|16@0+ (1,0) [0|65535] "" IOT
+
+BO_ 2560729090 BMS_Version: 8 BMS
+ SG_ BMS_Code_Version : 32|16@1+ (1,0) [0|65535] "" IOT
+
+
+
+CM_ "IoT battery-testing gateway (ESP32-S3). CAN @ 500 kbps default (runtime-changeable, see IoT_Baud_Cmd). Standard 11-bit IDs are the bootloader/flash + baud-config channel; extended 29-bit 0x18A1xxxx IDs are the BMS telemetry/config bus.";
+CM_ BU_ IOT "This device (ESP32_S3_test10). Runs from app0 normally; the factory partition runs the CAN-flash bootloader.";
+CM_ BU_ BMS "Battery management system — source of the 0x18A1xxxx telemetry.";
+CM_ BU_ HOST "Flash/config host: the desktop CAN flasher (can_flasher.py) and/or config tool.";
+CM_ BO_ 11 "Bootloader command/response channel (0x0B). BIDIRECTIONAL: HOST sends commands (Byte0 = A0/A1/A2/A3/A6), the device (factory) replies on the SAME id with a response code in Byte0 (50/51/52/53/54/55) or echoes B1 to activate. Magic byte (index 2) must be 0xE2 for command frames. Data0..3 carry up to Len (max 4) firmware bytes for the A1 DATA command. Stop-and-wait: one response per command frame.";
+CM_ BO_ 12 "IoT CAN self-update ENTER trigger (0x0C). Sent by the host to tell app0 to back up app0->app1 and reboot into the factory CAN-flash bootloader. Fixed payload: 69 96 69 96 69 96 69 96 (bytes 0..6 alternating 0x69/0x96 are required; byte 7 ignored). DISTINCT from the LCD product, which uses 0x0D.";
+CM_ BO_ 736 "Runtime CAN baud change (0x2E0). BaudMagic (byte0) MUST be 0xB0. BaudSelector (byte1): 0x11=125k, 0x22=250k, 0x55=500k. Device ACKs on IoT_Baud_Ack (0x2E1) at the current baud, persists to NVS (namespace iot_cfg / key can_baud — the single source of truth for app0 AND the factory bootloader), then re-tunes immediately. DISTINCT id+data from the LCD (LCD uses 0x2CC with a bare 01/02/05 selector).";
+CM_ BO_ 737 "ACK for a baud change (0x2E1). Echoes BaudMagic (0xB0) + BaudSelector; Effect=0 means applied NOW. Sent at the OLD baud before the driver re-tunes so the host receives it pre-switch.";
+CM_ BO_ 1110 "Bootloader heartbeat (0x456). The factory CAN-flash bootloader emits this while idle (payload 11 12 13 14 15 16 17 18). The flasher uses it to detect the device is in the bootloader and skip re-sending the trigger.";
+CM_ BO_ 1794 "Bootloader 'ready to flash' beacon (0x702). Emitted by the factory bootloader once it is ready to accept a flash (payload 5A A5 5A A5 5A A5 5A A5). Informational for the operator/host UI.";
+CM_ BO_ 2560688129 "IoT -> BMS config/timestamp (extended 0x18A10001). Cmd=0x2B (43) is a timestamp sync carrying Second/Minute/Hour/Day/Month/Year. Also used by the desktop-app serial->CAN config path (other Cmd values, payload passed through).";
+CM_ BO_ 2560753154 "IoT diagnostics: versions + status (extended 0x18A1FE02). BMS_Version and IoT_Version are little-endian 16-bit (IoT version = IOT_VERSION with dots stripped, e.g. 1.0.0 -> 100). Partition_ID tells which slot is running.";
+CM_ BO_ 2560753155 "IoT diagnostics: device id (extended 0x18A1FE03). 8 ASCII chars = last 8 characters of the SETUP id (e.g. 'B0426003').";
+CM_ BO_ 2560695042 "Example BMS telemetry frame: battery voltage (extended 0x18A11B02). Voltage_raw is big-endian bytes 0-1. NOTE: this is ONE entry of a larger telemetry MATRIX — the IoT accepts every extended frame matching (id & 0xFFFF00FF) == 0x18A10002, i.e. 0x18A1<dev_idx>02 with dev_idx 0x00..0xC7 (byte 1). dev_idx 0x1B (27) is voltage; per-index payload semantics are defined by the BMS spec, not by the IoT firmware (which stores/forwards the raw 8 bytes).";
+CM_ BO_ 2560729090 "Example BMS telemetry frame: BMS code version (extended 0x18A1A002, dev_idx 0xA0). BMS_Code_Version = little-endian bytes 4-5. See the note on BMS_Voltage for the full 0x18A1<idx>02 addressing scheme.";
+CM_ SG_ 11 Magic "Must be 0xE2 (BL_MAGIC) for A0/A1/A2/A3 command frames.";
+CM_ SG_ 11 Len "Number of valid firmware bytes in Data0..3 for the A1 DATA command (1..4).";
+CM_ SG_ 736 BaudMagic "Must be 0xB0 or the command is ignored.";
+
+
+VAL_ 11 Byte0 160 "CMD_UNLOCK_A0" 161 "CMD_DATA_A1" 162 "CMD_VERIFY_A2" 163 "CMD_RESET_A3" 166 "CMD_READ_VERSION_A6" 177 "ACTIVATE_ECHO_B1" 80 "RESP_OK_50" 81 "RESP_ERROR_51" 82 "RESP_INVALID_52" 83 "RESP_CRC_OK_53" 84 "RESP_CRC_FAIL_54" 85 "RESP_SEQ_ERROR_55" ;
+VAL_ 736 BaudMagic 176 "REQUIRED_0xB0" ;
+VAL_ 736 BaudSelector 17 "BAUD_125K" 34 "BAUD_250K" 85 "BAUD_500K" ;
+VAL_ 737 BaudSelector 17 "BAUD_125K" 34 "BAUD_250K" 85 "BAUD_500K" ;
+VAL_ 737 Effect 0 "APPLIED_NOW" 1 "NEXT_BOOT" ;
+VAL_ 2560688129 Cmd 43 "TIMESTAMP_SYNC" ;
+VAL_ 2560753154 MQTT_Connected 0 "disconnected" 1 "connected" ;
+VAL_ 2560753154 Partition_ID 0 "app0" 1 "app1" 2 "factory" ;

@@ -1,0 +1,138 @@
+VERSION ""
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+
+BU_: Tester Jig
+
+VAL_TABLE_ TestStatus 1 "PASS" 0 "FAIL" ;
+
+BO_ 1536 Jig_BarcodeFrame1: 8 Tester
+ SG_ Char0 : 0|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char1 : 8|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char2 : 16|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char3 : 24|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char4 : 32|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char5 : 40|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char6 : 48|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char7 : 56|8@1+ (1,0) [0|255] "" Jig
+
+BO_ 1537 Jig_BarcodeFrame2: 8 Tester
+ SG_ Char8 : 0|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char9 : 8|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char10 : 16|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char11 : 24|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char12 : 32|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char13 : 40|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char14 : 48|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char15 : 56|8@1+ (1,0) [0|255] "" Jig
+
+BO_ 1538 Jig_BarcodeFrame3: 4 Tester
+ SG_ Char16 : 0|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char17 : 8|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char18 : 16|8@1+ (1,0) [0|255] "" Jig
+ SG_ Char19 : 24|8@1+ (1,0) [0|255] "" Jig
+
+BO_ 1808 Jig_ResultStatusBarcode: 8 Jig
+ SG_ Seq M : 0|8@1+ (1,0) [0|2] "" Tester
+ SG_ Status m0 : 8|8@1+ (1,0) [0|1] "" Tester
+ SG_ Barcode_0 m0 : 16|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_1 m0 : 24|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_2 m0 : 32|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_3 m0 : 40|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_4 m0 : 48|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_5 m0 : 56|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_6 m1 : 8|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_7 m1 : 16|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_8 m1 : 24|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_9 m1 : 32|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_10 m1 : 40|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_11 m1 : 48|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_12 m1 : 56|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_13 m2 : 8|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_14 m2 : 16|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_15 m2 : 24|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_16 m2 : 32|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_17 m2 : 40|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_18 m2 : 48|8@1+ (1,0) [0|255] "" Tester
+ SG_ Barcode_19 m2 : 56|8@1+ (1,0) [0|255] "" Tester
+
+BO_ 1809 Jig_ResultCells: 8 Jig
+ SG_ Seq M : 0|8@1+ (1,0) [0|2] "" Tester
+ SG_ Cell0_mV m0 : 8|16@1+ (1,0) [0|4000] "mV" Tester
+ SG_ Cell1_mV m0 : 24|16@1+ (1,0) [0|4000] "mV" Tester
+ SG_ Cell2_mV m0 : 40|16@1+ (1,0) [0|4000] "mV" Tester
+ SG_ Cell3_mV m1 : 8|16@1+ (1,0) [0|4000] "mV" Tester
+ SG_ Cell4_mV m1 : 24|16@1+ (1,0) [0|4000] "mV" Tester
+ SG_ Cell5_mV m1 : 40|16@1+ (1,0) [0|4000] "mV" Tester
+ SG_ Cell6_mV m2 : 8|16@1+ (1,0) [0|4000] "mV" Tester
+ SG_ Cell7_mV m2 : 24|16@1+ (1,0) [0|4000] "mV" Tester
+
+BO_ 1810 Jig_ResultTemps: 8 Jig
+ SG_ Seq M : 0|8@1+ (1,0) [0|1] "" Tester
+ SG_ Temp0_C10 m0 : 8|16@1- (1,0) [-400|1000] "0.1 degC" Tester
+ SG_ Temp1_C10 m0 : 24|16@1- (1,0) [-400|1000] "0.1 degC" Tester
+ SG_ Temp2_C10 m0 : 40|16@1- (1,0) [-400|1000] "0.1 degC" Tester
+ SG_ Temp3_C10 m1 : 8|16@1- (1,0) [-400|1000] "0.1 degC" Tester
+
+BO_ 1811 Jig_HarnessFault: 8 Jig
+ SG_ CellFaultMask : 0|8@1+ (1,0) [0|255] "" Tester
+ SG_ TempFaultMask : 8|8@1+ (1,0) [0|15] "" Tester
+ SG_ InitFailed : 24|8@1+ (1,0) [0|1] "" Tester
+ SG_ CellRawFaultMask : 32|8@1+ (1,0) [0|255] "" Tester
+ SG_ TempRepeatabilityFaultMask : 40|8@1+ (1,0) [0|15] "" Tester
+ SG_ PassingReadingCount : 48|8@1+ (1,0) [0|10] "" Tester
+
+BO_ 1824 Jig_Heartbeat: 8 Jig
+ SG_ Marker_H : 0|8@1+ (1,0) [0|255] "" Tester
+ SG_ Marker_B : 8|8@1+ (1,0) [0|255] "" Tester
+ SG_ Counter : 16|16@1+ (1,0) [0|65535] "" Tester
+ SG_ CAN_TEC : 32|8@1+ (1,0) [0|255] "" Tester
+ SG_ CAN_REC : 40|8@1+ (1,0) [0|255] "" Tester
+ SG_ CAN_LEC : 48|8@1+ (1,0) [0|7] "" Tester
+ SG_ TxQueueDepth : 56|8@1+ (1,0) [0|255] "" Tester
+
+CM_ BO_ 1536 "Barcode assembly frame 1 of 3 - bytes 0-7. ID changed from 0x700 to 0x600.";
+CM_ BO_ 1537 "Barcode assembly frame 2 of 3 - bytes 8-15. ID changed from 0x701 to 0x601. Jig timestamps arrival; if frame 3 doesn't follow within ~100ms the jig assumes a 16-byte barcode.";
+CM_ BO_ 1538 "Barcode assembly frame 3 of 3 (optional) - bytes 16-19, only present for 20-byte barcodes. ID changed from 0x702 to 0x602.";
+CM_ BO_ 1808 "Multiplexed on Seq (0-2). Seq0 carries Status + barcode chars 0-5, Seq1 carries chars 6-12, Seq2 carries chars 13-19. Sent on both PASS and FAIL.";
+CM_ SG_ 1808 Status "0 = FAIL, 1 = PASS";
+CM_ BO_ 1809 "Multiplexed on Seq (0-2). 8 averaged cell voltages, 3 values per frame except the last (2 values, zero-padded).";
+CM_ BO_ 1810 "Multiplexed on Seq (0-1). 4 averaged temperature readings in tenths of a degree C, signed.";
+CM_ BO_ 1811 "Single-frame harness fault location report - REVISED LAYOUT. Byte 0 CellFaultMask: bit n set = cell n's AVERAGE reads 0V or >=4V, all 8 bits meaningful. Byte 1 TempFaultMask: bit n (n=0-3) set = that temp sensor's AVERAGE deviates from the other 3 by more than tolerance (leave-one-out comparison) - only bits 0-3 are meaningful, bits 4-7 always 0. Byte 2 reserved (0x00) - VblkMismatch removed from this layout; the VBLK cross-check no longer reports over CAN. Byte 3 InitFailed: 1 if DAS init itself never succeeded - when this is set, CellFaultMask will read 0xFF (every cell at the zero threshold, since no real reading was ever taken) but TempFaultMask will read 0 (that check trivially agrees on all-zero data) - this byte is what actually distinguishes 'DAS never initialized' from 'DAS initialized but every cell genuinely reads near 0V'. Byte 4 CellRawFaultMask (NEW): bit n set = cell n hit the OV limit on AT LEAST ONE of the 10 raw per-reading samples, even though its AVERAGE (byte 0) stayed clean - exists because Status reflects the raw per-reading pass/fail decision, not the averaged data, so a transient spike can fail Status while byte 0 shows nothing. Byte 5 TempRepeatabilityFaultMask (NEW, bits 0-3 only): bit n set = temp sensor n's own reading varied by more than TEMP_TOLERANCE_C10 across the 10 raw samples (instability across the run, not an offset from the other sensors like byte 1). Byte 6 PassingReadingCount (NEW): 0-10, how many of the 10 raw readings individually passed the per-reading check - if Status=FAIL and this is below MIN_PASSING_READINGS (8) that alone explains the FAIL even when every mask above reads 0x00. Byte 7 reserved (0x00). Bytes 4-6 exist specifically to explain a FAIL when bytes 0/1 are clear: averaging can hide a transient spike or an unstable sensor that still failed the raw per-reading/repeatability checks driving Status. Previous revision used a badRangeDetected summary bit plus lowestFlaggedChannel/highestFlaggedChannel bytes - both removed as redundant now that CellFaultMask/TempFaultMask give every affected channel directly.";
+CM_ BO_ 1824 "Board-to-tool heartbeat, sent every ~500ms independent of any RX activity, for diagnosing one-directional CAN faults. Marker_H/Marker_B spell 'HB' in ASCII (0x48 0x42).";
+CM_ SG_ 1824 CAN_LEC "MAX17841B/SAME54 CAN1 last error code: 0=No Error,1=Stuff,2=Form,3=AckError... see CAN1->PSR.LEC bitfield";
+
+VAL_ 1808 Status 0 "FAIL" 1 "PASS" ;
+
+BA_DEF_ "BusType" STRING ;
+BA_DEF_DEF_ "BusType" "CAN" ;

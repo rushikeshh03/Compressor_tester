@@ -1,0 +1,328 @@
+        Digital Power Module
+
+CANBUS Communication
+           Protocol
+
+      Beian New Energy Co., Ltd.
+                      CANBUS Communication Protocol Version: 2.0
+
+1 Scope
+
+This communication protocol adopts CAN specification version 2.0B, 29-bit identifier, and
+
+extended frame.
+
+   2 Range
+
+This CANbus communication protocol describes the external CAN communication protocol
+
+of Beian New Energy Co., Ltd. It is applicable to the 10kW series, 12kW series, 20kW series, 30kW
+
+series charging modules and laser power supplies and other power modules produced by Beian
+
+New Energy Co., Ltd.
+
+3 Physical communication interface
+
+Canbus. Baud rate 125kbps/s
+
+4 Frame Structure
+
+29-bit identifier as below:
+
+28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+
+Byte3                        Byte2              Byte1  Byte0
+
+                             Command ID_H              Module Address
+
+                                           2/8
+                                          CANBUS Communication Protocol Version: 2.0
+
+Command Define 1:
+
+   Functions           CAN ID             Module    Data                           Byte
+                 (0x1907,C080)>>7         Address  Length
+     Output                                                    0  1                23       45       6        7
+Voltage/current                             0~60      8    CMD=0
+                                                                  Current(mA)*1000          Voltage(mV)*1000
+     Setting                                          8    CMD=0
+
+Module Return (0x1807,C080)>>7 1~60                   8    CMD=1        NZ,NZ
+                                                      8    CMD=1  Current Success
+                                                      8    CMD=2  Voltage Success
+                                                      8    CMD=2
+                                                                         0,NZ
+                                                                    Current Fail
+                                                                  Voltage Success
+
+                                                                         NZ,0
+                                                                  Current Success
+
+                                                                    Voltage Fail
+                                                                          0,0
+
+                                                                    Current Fail
+                                                                    Voltage Fail
+
+ Read output                              1~60                    /                //       //       /        /
+                        (0x1907,C080)>>7
+
+voltage/current
+
+Module return (0x1807,C080)>>7 1~60                                                Current  Voltage  Status  Status
+                                                                                   (A*10)   (V*10)      1       0
+
+Power On/OFF     (0x1907,C080)>>7         0~60                    /                //       //          /    0x55
+     Setting                                                                                                 Power
+
+                                                                                                              ON
+                                                                                                             0xAA
+                                                                                                             Power
+                                                                                                              OFF
+
+Module return (0x1807,C080)>>7 1~60                               NZ,NZ: Success
+                                                                       0,0:Fail
+
+      Note:
+
+      Address 0 is a broadcast command, which is executed for all modules on the CANbus. The broadcast
+command module does not respond. Addresses 1 to 60 represent module addresses, and the
+corresponding module addresses will reply with data.
+
+      NZ represents non-zero data (default 0xFF). The data field is transmitted first with the higher byte
+and then with the lower byte. If Module 2 does not receive the monitoring command within 2 minutes,
+it is considered that the communication has been interrupted.
+
+      "/" indicates the current reservation, and 0 is filled in.
+
+                                                           3/8
+           CANBUS Communication Protocol Version: 2.0
+
+Definition of module status flags:
+
+Byte7:Bit                           Status0                                            Panel LED
+
+Bit 7      1: Output over low voltage 0: Normal                                    1: YELLOW LED ON
+Bit 6      1: Output over high voltage 0: Normal                                   1: RED LED ON
+Bit 5      1: Input over low voltage 0: Normal                                     1: RED LED ON
+Bit 4      1: Input over high voltage 0: Normal                                    1: RED LED ON
+Bit 3      1: Fan fail 0: Fan normal                                               1: RED LED FLASHING
+           1: Module output constant current 0: Module output constant voltage
+Bit 2      Bit2 is status, not fail status, please don't make it into fail group.  1: YELLOW LED ON
+           1: Module fail 0:Normal
+Bit 1      1: Module power OFF 0: Module power ON                                  1: RED LED ON
+Bit 0                                                                              /
+
+Byte6:Bit                           Status1                                        Panel LED
+
+Bit 7      1:Setting the module power OFF 0: Setting the module power ON           1: GREEN LED FLASHING
+Bit 6                                                                              0: GREEN LED ON
+Bit 5      1: Over temperature protection 0:Normal                                 1: RED LED ON
+Bit 4      1: Over current protection 0: Normal                                    1: RED LED ON
+Bit 3
+
+Bit 2
+
+Bit 1
+Bit 0
+
+Note:
+
+      For the above alarms, except when the panel indicator light is on red, the module will automatically
+shut down for protection. For other modules, normal output will be maintained.
+
+                                             4/8
+                                  CANBUS Communication Protocol Version: 2.0
+
+Command Define 1:
+
+  Functions       CAN ID          Module    Data                                     Byte
+                                  Address  Length
+Read Setting                                       0     1        2            3           4          5  6          7
+Voltage Value                                 0
+                  (0x1901,0080)>>7 1~60                                             Empty
+
+                                                   (Reading the voltage setting in the module, to confirm the value is right)
+
+Module return (0x1801,0080)>>7 1~60        8                                                             Voltage Setting
+
+                                                                                                            (V*10)
+
+Read Setting      (0x1901,0880)>>7 1~60    0                                        Empty
+
+Current Value                                      (Reading the current setting in the module, to confirm the value is right)
+
+Module return (0x1801,0880)>>7 1~60        8       Max Current
+
+                                                   Setting(A*10)
+
+Read Input        (0x1907,A080)>>7 1~60    8       0x31  /        /            /           /          /  /          /
+
+Voltage Value
+
+Module return (0x1807,A080)>>7 1~60        8       0x31               Vab/32                  Vbc/32        Vca/32
+                                                                   Signal phase
+
+                                                                        V/32
+                                                                  DC input V/32
+
+Read
+
+environment (0x1900,8080)>>7 1~60          0                                        Empty
+
+temperature
+
+Module return (0x1800,8080)>>7 1~60        8                                               Temperature
+                                                                                            *10
+
+                                                                               0x55
+
+Module                                                                         POWE
+
+uniform current (0x19C2,1880)>>7  0        6       /     /        /            R OFF
+
+control                                                                        0xAA
+
+                                                                               POWE
+
+                                                                               R ON
+
+Internal uniform                                   The module automatically reports
+
+current in the (0x1807,8080)>>7 1~60       8       the average current data every
+
+module                                             400ms, and users do not need to
+
+                                                         pay attention to it.
+
+                                                                               0x55
+
+Module address                                                                 GREE
+
+search            (0x19C2,2880)>>7 1~60    8                                   N LED
+
+                                                                               FLASH
+
+                                                                               ING
+
+                                                   5/8
+           CANBUS Communication Protocol Version: 2.0
+
+5 Frame Example.
+
+1. Broadcast setting the module ON/OFF
+
+Send ID 1907C080 Data 2 0 0 0 0 0 0 55
+
+Return ID                   Data
+
+Broadcast command no reply
+
+2. Setting the module 1 POWER ON/OFF
+     Send ID 1907C081 Data 2 0 0 0 0 0 0 55
+     Return ID 1807C081 Data 2 FF 0 0 0 0 0 0
+    If the setting is successful, Byte1 will return FF; if it fails, it will return 00.
+
+3. Setting the module 3 output voltage and current
+
+     Send ID 1907C083 Data 0 01 5F 90 00 01 86 A0
+
+     Return ID 1807C083 Data 0 FF 0 0 0 0 0 0
+    Module 3 setting the output voltage 100V, Current 100A
+    100V = 100*1000 = 100000mV = 0x186A0
+    90A = 90*1000 =90000mA = 0x15F90
+    If the setting is successful, Byte1 will return FF; if it fails, it will return 00.
+
+4. Read module 2 status information
+
+Send ID 1907C082 Data 1 0 0 0 0 0 0 0
+
+Return ID 1807C082 Data 1 0 01 17 03 E8 0 0
+
+Output Voltage Value: Byte4~Byte5       0x03E8 = 1000/10  100V
+Output Current Value: Byte2~Byte3       0x0117 = 279/10  27.9A
+Output Status: Byte6~Byte7              0x00 0x00 Normal, No warning.
+
+5. Read module 1 output voltage
+
+                                     6/8
+           CANBUS Communication Protocol Version: 2.0
+
+Send ID 19010081 Data
+
+ Return ID 18010081 Data 1 0 18 36 0 1E 03 84
+Module 1 output voltage setting value: Byte6~Byte7 0x0384 = 900/10 = 90V
+
+6. Read module 5 output current(Limit current)
+     Send ID 19010885 Data
+
+ Return ID 18010885 Data 01 3D 0 0 0 0 40 2C
+Module 5 output current setting value: Byte0~Byte1 0x013D = 317/10 =31.7A
+
+7. Read module 1 input voltage
+     Send ID 1907A081 Data 31 0 0 0 0 0 0 0
+
+ Return ID 1807A081 Data 31 01 2F 1E 2F 2C 2F 26
+
+Module 1 input voltage
+Vab Byte2~Byte3 0x2F1E = 12062/32 =376.9V
+Vbc Byte4~Byte5 0x2F2C = 12076/32 =377.4V
+Vca Byte6~Byte7 0x2F26 = 12070/32 =377.2V
+
+8. Read module 1 environment temperature
+     Send ID 19008081 Data
+
+ Return ID 18008081 Data 0 1F 0B B5 01 52 03 A1
+Environment temperature: Byte4~Byte5 0x0152 = 338/10 =33.8°C
+
+9. Disable the module's automatic current balance  55 00 00
+     Send ID 19C21880 Data 0 0 0
+
+Return ID  Data
+
+Byte4 = 0x55 Current balance OFF 0xAA Current balance ON
+
+10. Module address search
+     Send ID 19C22882 Data 0 0 0 55 0 0 0 0
+
+                       7/8
+                  CANBUS Communication Protocol Version: 2.0
+
+       Return ID  Data
+
+Search the Module 2. The green light of Module 2 will flash for 10 seconds.
+
+6 Cautions
+
+1. During the soft-start process, the module cannot be directly loaded. It can only be loaded after
+    the output voltage of the module is established (output is stable). This can be determined by
+    checking the module status flags (refer to Table 6-1 and Figure 6-1).
+
+Byte7:Bit               Status0                                                    Panel LED
+
+Bit 7      1: Output over low voltage 0: Normal                                    1: YELLOW LED ON
+Bit 6      1: Output over high voltage 0: Normal                                   1: RED LED ON
+Bit 5      1: Input over low voltage 0: Normal                                     1: RED LED ON
+Bit 4      1: Input over high voltage 0: Normal                                    1: RED LED ON
+Bit 3      1: Fan fail 0: Fan normal                                               1: RED LED FLASHING
+           1: Module output constant current 0: Module output constant voltage
+Bit 2      Bit2 is status, not fail status, please don't make it into fail group.  1: YELLOW LED ON
+           1: Module fail 0:Normal
+Bit 1      1: Module power OFF 0: Module power ON                                  1: RED LED ON
+Bit 0                                                                              /
+                                                     Table 6-1
+
+                                                                      Output Stable
+
+                                       soft-start process
+
+                                                         Figure 6-1
+2. The output current of the module should be gradually increased in steps. For example, if the
+
+    required current is 100A, the initial current setting can be set at 10A, and then increase by 10%
+    of the load current, i.e., in increments of 10A, 20A, ....... , 90A, 100A. It is recommended that the
+    current ramp-up time be  1 second.
+
+                                                                          8/8
+

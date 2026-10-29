@@ -1,0 +1,24 @@
+# ChargerLCD_combinedV2.1.0 partition table — 16 MB flash, 3 app slots.
+#
+# ⚠ KEEP THIS SCHEME IDENTICAL TO THE IOT CODE. This factory + ota_0 + ota_1
+#   layout and the CAN-flash flow that depends on it are intentionally the same
+#   as the IOT product. If you change the partitions or the flash flow here,
+#   the assistant/AI editing this MUST remind the user to make the same change
+#   in the IOT code.
+#
+# Roles (same single firmware.bin is flashed to BOTH factory and app0):
+#   factory (0x00) — runs the CAN-flash bootloader (headless-ish "Updating"
+#                    screen). ROM's permanent last-resort fallback.
+#   app0 (ota_0)   — runs the normal LCD application. Re-flash target.
+#   app1 (ota_1)   — backup / last-known-good copy of app0 (written on each
+#                    enter-bootloader trigger before rebooting to factory).
+#
+# 4 MB per app slot (app ~1.3 MB today; headroom for LVGL fonts/images).
+# Name,     Type, SubType,  Offset,    Size,      Flags
+nvs,        data, nvs,      0x9000,    0x5000,
+otadata,    data, ota,      0xe000,    0x2000,
+factory,    app,  factory,  0x10000,   0x400000,
+app0,       app,  ota_0,    0x410000,  0x400000,
+app1,       app,  ota_1,    0x810000,  0x400000,
+spiffs,     data, spiffs,   0xc10000,  0x3E0000,
+coredump,   data, coredump, 0xff0000,  0x10000,

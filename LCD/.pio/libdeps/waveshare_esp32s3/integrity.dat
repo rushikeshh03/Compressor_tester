@@ -1,0 +1,5 @@
+https://github.com/esp-arduino-libs/ESP32_IO_Expander.git#v1.1.1
+tanakamasayuki/EspUsbHost
+https://github.com/esp-arduino-libs/ESP32_Display_Panel.git#v1.0.4
+https://github.com/esp-arduino-libs/esp-lib-utils.git#v0.2.3
+lvgl/lvgl @ ^8.3.11

@@ -1,0 +1,40 @@
+# EspUsbHostHIDVendor
+
+> 日本語版: [README.ja.md](README.ja.md)
+
+Demonstrates vendor-class HID communication: receiving input reports and sending output/feature reports to a USB HID vendor device.
+
+## Hardware
+
+- ESP32-S3 (or another board supported by Arduino-ESP32 USB Host)
+- USB HID vendor device (typically an ESP32-S3 running a vendor HID peripheral sketch)
+
+## What it does
+
+- Receives vendor HID input reports and prints their contents to Serial
+- Sends a fixed 63-byte output report or feature report on Serial command
+
+## Serial commands
+
+| Command | Action |
+|---------|--------|
+| `o` | Send output report (`"host output"`) |
+| `f` | Send feature report (`"host feature"`) |
+
+## Key APIs
+
+- `usb.onHIDVendorInput(callback)` — fired on each vendor HID input report with `EspUsbHostHIDVendorInput`
+  - `input.interfaceNumber` — HID interface number
+  - `input.rawData`, `input.rawLength` — raw HID input report bytes
+  - `input.reportData`, `input.reportLength` — report bytes after removing the Report ID when one is present
+- `usb.sendHIDVendorOutput(data, length)` — sends an HID output report through the interrupt OUT endpoint
+- `usb.sendHIDVendorFeature(data, length)` — sends an HID feature report through EP0 `SET_REPORT`
+
+## Expected Serial output
+
+```
+connected: device: address=1 portId=0x01 vid=303a pid=4004 class=0x00(Device) speed=full product="ESP32S3 HID Vendor"
+vendor iface=0 len=63 data=device input
+send output: ok
+send feature: ok
+```

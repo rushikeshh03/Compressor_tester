@@ -1,0 +1,199 @@
+VERSION "ChargerLCD_combined V2.1.0 - CAN interface from the LCD's perspective"
+
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: LCD BMS CHARGER HOST
+
+
+BO_ 2566848513 CLB_Battery_Demand: 8 BMS
+ SG_ VoltageRequest : 7|16@0+ (0.1,0) [0|1000] "V" LCD
+ SG_ CurrentRequest : 23|16@0+ (0.1,0) [0|1000] "A" LCD
+ SG_ ChargeEnable : 32|1@1+ (1,0) [0|1] "" LCD
+
+BO_ 2566848514 CAN_Battery_Demand: 8 BMS
+ SG_ VoltageRequest : 7|16@0+ (0.1,0) [0|1000] "V" LCD
+ SG_ CurrentRequest : 23|16@0+ (0.1,0) [0|1000] "A" LCD
+ SG_ ChargeEnable : 32|1@1+ (1,0) [0|1] "" LCD
+
+BO_ 2559980119 BMS_HeartBeat: 8 BMS
+ SG_ BatteryVoltage : 7|16@0+ (0.01,0) [0|655.35] "V" LCD
+ SG_ BatteryCurrent : 23|16@0- (0.01,0) [-327.68|327.67] "A" LCD
+ SG_ SOC : 48|8@1+ (1,0) [0|100] "%" LCD
+ SG_ ChgFET : 62|1@1+ (1,0) [0|1] "" LCD
+
+BO_ 2559590401 JEM_BMS_to_VCU: 8 BMS
+ SG_ BatteryVoltage : 23|16@0+ (0.01,0) [0|655.35] "V" LCD
+ SG_ BatteryCurrent : 39|16@0- (0.01,0) [-327.68|327.67] "A" LCD
+ SG_ SOC : 48|8@1+ (1,0) [0|100] "%" LCD
+
+BO_ 2566850512 BMS_Event_Info: 4 BMS
+ SG_ PreChargeChannel : 0|1@1+ (1,0) [0|1] "" LCD
+ SG_ DischargeChannel : 1|1@1+ (1,0) [0|1] "" LCD
+ SG_ ChargeChannel : 2|1@1+ (1,0) [0|1] "" LCD
+ SG_ FanChannel : 3|1@1+ (1,0) [0|1] "" LCD
+ SG_ Isolation0 : 4|1@1+ (1,0) [0|1] "" LCD
+ SG_ Isolation1 : 5|1@1+ (1,0) [0|1] "" LCD
+ SG_ StartRequest : 6|1@1+ (1,0) [0|1] "" LCD
+
+BO_ 2566848603 BMS_To_Charger: 8 BMS
+ SG_ ChargerStateSet : 0|2@1+ (1,0) [0|2] "" LCD
+ SG_ OutputVoltageSetPt : 8|16@1+ (0.05,0) [0|3276.75] "V" LCD
+ SG_ OutputCurrentSetPt : 24|16@1+ (0.01,0) [0|655.35] "A" LCD
+
+BO_ 2560688130 Legacy_BMS_Status: 8 BMS
+ SG_ CellOverVoltage : 1|1@1+ (1,0) [0|1] "" LCD
+ SG_ ChargeRelay : 19|1@1+ (1,0) [0|1] "" LCD
+ SG_ Op_Idle : 32|1@1+ (1,0) [0|1] "" LCD
+ SG_ Op_Charging : 33|1@1+ (1,0) [0|1] "" LCD
+ SG_ Op_Discharging : 34|1@1+ (1,0) [0|1] "" LCD
+ SG_ Op_Balancing : 35|1@1+ (1,0) [0|1] "" LCD
+ SG_ SOC : 56|8@1+ (1,0) [0|100] "%" LCD
+
+BO_ 2560695042 Legacy_BMS_PackParams: 8 BMS
+ SG_ PackVoltage : 7|16@0+ (0.01,0) [0|655.35] "V" LCD
+ SG_ PackCurrent : 23|16@0- (0.1,0) [-3276.8|3276.7] "A" LCD
+
+BO_ 2566841856 CAN_TimeStamp: 8 BMS
+ SG_ Year : 0|8@1+ (1,0) [0|99] "year" LCD
+ SG_ Month : 8|8@1+ (1,0) [1|12] "month" LCD
+ SG_ Day : 16|8@1+ (1,0) [1|31] "day" LCD
+ SG_ Hour : 24|8@1+ (1,0) [0|23] "h" LCD
+ SG_ Minute : 32|8@1+ (1,0) [0|59] "min" LCD
+ SG_ Second : 40|8@1+ (1,0) [0|59] "s" LCD
+
+BO_ 2567422081 BA_Command_1: 8 LCD
+ SG_ Command M : 0|8@1+ (1,0) [0|255] "" CHARGER
+ SG_ SetCurrent m0 : 15|24@0+ (0.001,0) [0|110] "A" CHARGER
+ SG_ SetVoltage m0 : 39|32@0+ (0.001,0) [0|1000] "V" CHARGER
+ SG_ PowerCmd m2 : 56|8@1+ (1,0) [0|255] "" CHARGER
+
+BO_ 2550644865 BA_Reply_1: 8 CHARGER
+ SG_ Command M : 0|8@1+ (1,0) [0|255] "" LCD
+ SG_ OutputCurrent m1 : 23|16@0+ (0.1,0) [0|6553.5] "A" LCD
+ SG_ OutputVoltage m1 : 39|16@0+ (0.1,0) [0|6553.5] "V" LCD
+ SG_ S1_PwrOffSet m1 : 50|1@1+ (1,0) [0|1] "" LCD
+ SG_ S1_OverTemp m1 : 49|1@1+ (1,0) [0|1] "" LCD
+ SG_ S1_OverCurrent m1 : 48|1@1+ (1,0) [0|1] "" LCD
+ SG_ S0_OutputUV m1 : 63|1@1+ (1,0) [0|1] "" LCD
+ SG_ S0_OutputOV m1 : 62|1@1+ (1,0) [0|1] "" LCD
+ SG_ S0_InputUV m1 : 61|1@1+ (1,0) [0|1] "" LCD
+ SG_ S0_InputOV m1 : 60|1@1+ (1,0) [0|1] "" LCD
+ SG_ S0_FanFail m1 : 59|1@1+ (1,0) [0|1] "" LCD
+ SG_ S0_ConstCurrent m1 : 58|1@1+ (1,0) [0|1] "" LCD
+ SG_ S0_ModuleFail m1 : 57|1@1+ (1,0) [0|1] "" LCD
+ SG_ S0_PowerOff m1 : 56|1@1+ (1,0) [0|1] "" LCD
+
+BO_ 2566946945 BA_Temp_Request_1: 0 LCD
+
+BO_ 2550169729 BA_Temp_Reply_1: 8 CHARGER
+ SG_ Temperature : 39|16@0- (0.1,0) [-3276.8|3276.7] "degC" LCD
+
+BO_ 2579634304 Current_Share: 6 LCD
+ SG_ CurrentShareCmd : 24|8@1+ (1,0) [0|255] "" CHARGER
+
+BO_ 2432505114 Charger_To_BMS: 8 LCD
+ SG_ ChargerState : 0|4@1+ (1,0) [0|15] "" BMS
+ SG_ PwrlineState : 4|2@1+ (1,0) [0|3] "" BMS
+ SG_ OutputVoltage : 8|16@1+ (0.05,0) [0|3276.75] "V" BMS
+ SG_ OutputCurrent : 24|16@1+ (0.05,-1600) [-1600|1676.75] "A" BMS
+
+BO_ 716 Baud_Config: 1 HOST
+ SG_ BaudSelector : 0|8@1+ (1,0) [0|255] "" LCD
+
+BO_ 717 Kion_Config: 1 HOST
+ SG_ KionEnable : 0|8@1+ (1,0) [0|1] "" LCD
+
+BO_ 718 Config_Ack: 3 LCD
+ SG_ AckSetting : 0|8@1+ (1,0) [0|255] "" HOST
+ SG_ AckValue : 8|8@1+ (1,0) [0|255] "" HOST
+ SG_ AckEffect : 16|8@1+ (1,0) [0|1] "" HOST
+
+BO_ 13 Enter_Bootloader: 8 HOST
+ SG_ TriggerByte0 : 0|8@1+ (1,0) [0|255] "" LCD
+
+BO_ 11 Bootloader_Data: 8 HOST
+ SG_ Command : 0|8@1+ (1,0) [0|255] "" LCD
+
+BO_ 1110 Bootloader_Heartbeat: 8 LCD
+ SG_ HeartbeatByte0 : 0|8@1+ (1,0) [0|255] "" HOST
+
+BO_ 1794 Bootloader_Beacon: 8 LCD
+ SG_ BeaconByte0 : 0|8@1+ (1,0) [0|255] "" HOST
+
+
+
+CM_ "ChargerLCD_combined V2.1.0 CAN interface, documented from the LCD's point of view. Nodes: LCD = this display/charger-controller; BMS = battery pack / BMS; CHARGER = Beian BA-series power module(s); HOST = config / OTA-flash tool. Bus is 500 kbps-capable CAN 2.0B; the LCD default baud is CONFIG_CAN_BAUD_KBPS (250) and is runtime-selectable (see Baud_Config). All extended (29-bit) frames carry the 0x80000000 flag in their DBC id; standard frames use the raw 11-bit id.";
+CM_ BU_ LCD "The Coulomb Li Tech charger display (this firmware). Reads battery telemetry, drives the BA charger module(s), reports status to the BMS, and answers host config/flash commands.";
+CM_ BU_ BMS "Battery / BMS. Sends demand or telemetry frames; the LCD auto-detects which protocol is present (CLB / generic-CAN / 11.10 BMS / legacy Coulomb).";
+CM_ BU_ CHARGER "Beian BA-series digital power module(s), addresses 1..60. Commanded on 0x1907C080+addr, replies on 0x1807C080+addr. This DBC shows address 1; for module N add N to the base id.";
+CM_ BU_ HOST "Configuration / firmware-update tool (e.g. desktop CAN flasher).";
+CM_ BO_ 2566848513 "CLB battery charge demand (tp_charger_protocol). RX by LCD. Voltage/current are big-endian; ChargeEnable bit0 = 1 start / 0 stop. A frame with voltage < 1 V is ignored as noise.";
+CM_ BO_ 2566848514 "Generic-CAN battery charge demand. Same layout as CLB_Battery_Demand.";
+CM_ BO_ 2559980119 "11.10 BMS HeartBeat (pack telemetry). RX by LCD. THIS DBC SHOWS THE ORIGINAL LAYOUT (V=byte0-1, I=byte2-3, SOC=byte6, ChgFET=byte7 bit6). A NEWER pack shifts the fields by one byte (V=byte1-2, I=byte3-4, SOC=byte6) and carries the charge-FET on BMS_Event_Info instead of byte7. The LCD auto-detects: byte0 == 0 means the newer layout. Not a charge request - telemetry only.";
+CM_ BO_ 2559590401 "Alternate pack telemetry used by the newer 11.10 pack (parsed in parallel with the HeartBeat). Big-endian. Telemetry only.";
+CM_ BO_ 2566850512 "Newer 11.10 pack power-channel states (DLC 4, LSB-0 bit numbering in byte0). The LCD uses ChargeChannel (bit2) as the charge-FET indicator. Telemetry only - does not by itself mark a battery present.";
+CM_ BO_ 2566848603 "11.10 BMS -> Charger setpoint / charge command (ZIVAN/ACE, little-endian). ChargerStateSet: 0 disable, 1 enable, 2 full-charge (both 1 and 2 start charging). OutputVoltageSetPt factor is 0.05 V/bit on the NEWER pack and 0.01 V/bit on the ORIGINAL 11.10 pack - the LCD picks the factor from the detected HeartBeat layout. This is the only frame that starts/stops charging for an 11.10 BMS.";
+CM_ BO_ 2560688130 "Legacy Coulomb BMS status. RX by LCD. ChargeRelay = charge FET closed; the Op_* bits are the operating-state bitfield (byte4). NOTE: in KION mode a legacy Coulomb BMS makes the LCD stay listen-only - it reads this frame and never commands the charger.";
+CM_ BO_ 2560695042 "Legacy Coulomb BMS pack parameters (big-endian). PackCurrent is signed x0.1 A. Only used when no higher-priority battery type is active.";
+CM_ BO_ 2566841856 "BMS wall-clock (FromBMS). Used only for SD-log timestamps and on-screen time; charging is never gated on it. Year 0-99 maps to 2000-2099.";
+CM_ BO_ 2567422081 "LCD -> BA charger module command (address 1; module N = 0x1907C080+N). Multiplexed by byte0 Command: 0 = Set CC/CV (SetCurrent 24-bit + SetVoltage 32-bit, both big-endian), 1 = status request (no payload), 2 = power (PowerCmd byte7 0x55 ON / 0xAA OFF). SetCurrent is the COMBINED request split across parallel modules by the LCD.";
+CM_ BO_ 2550644865 "BA charger module -> LCD reply (address 1; module N = 0x1807C080+N). Multiplexed by byte0 Command echo. For Command==1 (status): OutputCurrent/OutputVoltage (big-endian x0.1) plus the Status0 (byte7) and Status1 (byte6) fault/state bits decoded here.";
+CM_ BO_ 2566946945 "LCD -> BA module environment-temperature request (address 1; module N = 0x19008080+N). Empty payload (DLC 0). Polled at ~1 Hz. Suppressed in KION listen-only mode.";
+CM_ BO_ 2550169729 "BA module -> LCD temperature reply (address 1; module N = 0x18008080+N). Environment temperature, big-endian signed x0.1 degC (bytes 4-5).";
+CM_ BO_ 2579634304 "LCD -> broadcast: enable/disable the modules' automatic current sharing (byte3 0xAA ON / 0x55 OFF, DLC 6). Sent only when more than one charger module is configured.";
+CM_ BO_ 2432505114 "LCD -> BMS charger status report (11.10 ChargerToBMS, ACE format, little-endian). Sent at 5 Hz only while an 11.10 BMS is present. OutputCurrent is offset -1600 A (raw = (A+1600)/0.05).";
+CM_ BO_ 716 "HOST -> LCD: change CAN baud. byte0 selector 0x01=125k, 0x02=250k, 0x05=500k. Applies immediately, persists to NVS, and is acknowledged by Config_Ack (effect = applied-now). The factory flasher reads the same persisted baud.";
+CM_ BO_ 717 "HOST -> LCD: toggle KION listen-only mode. byte0 0x00 = disable, 0x01 = enable. Persisted to NVS and applied on the NEXT boot (not mid-session); acknowledged by Config_Ack (effect = next-boot).";
+CM_ BO_ 718 "LCD -> HOST: acknowledgement for Baud_Config / Kion_Config. AckSetting 1=baud 2=kion; AckValue echoes the selector; AckEffect 0=applied now, 1=applies next boot.";
+CM_ BO_ 13 "HOST -> LCD: 'enter bootloader' trigger. DLC 8, data = 69 96 69 96 69 96 69 96. Reboots into the factory partition to run the CAN flash. IGNORED while a battery/BMS is actively communicating (disconnect the pack to flash).";
+CM_ BO_ 11 "HOST <-> LCD: CAN OTA flash channel (ABMS bootloader v3.6). Activate 0xB1 (echoed), then UNLOCK 0xA0 / DATA 0xA1 / VERIFY 0xA2 / RESET 0xA3 / READ_VERSION 0xA6. Responses are returned on this same id. Byte-stream protocol - only the command byte is modelled here.";
+CM_ BO_ 1110 "LCD -> HOST: bootloader idle heartbeat, fixed payload 11 12 13 14 15 16 17 18, every 2 s while in flash mode.";
+CM_ BO_ 1794 "LCD -> HOST: factory 'ready to flash' beacon, fixed payload 5A A5 5A A5 5A A5 5A A5.";
+CM_ SG_ 2559980119 BatteryCurrent "Signed: positive = charge, negative = discharge.";
+CM_ SG_ 2566848603 OutputVoltageSetPt "Factor shown is 0.05 (newer pack). Original 11.10 pack uses 0.01 V/bit.";
+CM_ SG_ 2432505114 OutputCurrent "Physical A = raw*0.05 - 1600.";
+
+VAL_ 2566848513 ChargeEnable 0 "Stop" 1 "Enable" ;
+VAL_ 2566848514 ChargeEnable 0 "Stop" 1 "Enable" ;
+VAL_ 2566848603 ChargerStateSet 0 "Disable" 1 "Enable" 2 "FullCharge" ;
+VAL_ 2567422081 Command 0 "SetCCCV" 1 "StatusReq" 2 "Power" ;
+VAL_ 2567422081 PowerCmd 85 "PowerOn_0x55" 170 "PowerOff_0xAA" ;
+VAL_ 2550644865 Command 0 "SetCCCV_Ack" 1 "Status" 2 "Power_Ack" ;
+VAL_ 2579634304 CurrentShareCmd 170 "On_0xAA" 85 "Off_0x55" ;
+VAL_ 2432505114 ChargerState 0 "Ideal" 1 "Charging" 2 "Standby" 3 "BatteryFault" 4 "ChargerFault" ;
+VAL_ 2432505114 PwrlineState 0 "Disconnected" 1 "Connected" 2 "Error" ;
+VAL_ 716 BaudSelector 1 "125kbps" 2 "250kbps" 5 "500kbps" ;
+VAL_ 717 KionEnable 0 "Disable" 1 "Enable" ;
+VAL_ 718 AckSetting 1 "Baud" 2 "Kion" ;
+VAL_ 718 AckEffect 0 "AppliedNow" 1 "NextBoot" ;
